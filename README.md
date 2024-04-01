@@ -4,7 +4,7 @@
 
 ### 1. Choose the suitable model
 Because of the relationship between the performance and volume of large language models, we need to choose a model of appropriate size. Here I selected the TinyLlama model after screening. Compared with some popular language models, the TinyLlama model has fewer parameters, but its performance is similar.
-URL: https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0
+- URL: https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0
 According to the introduction on the web page, we directly choose `Use a pipeline as a high-level helper`
 ```
 # Use a pipeline as a high-level helper
@@ -128,9 +128,9 @@ if user_input.strip():
 
 ### 5. Local Test
 Run `streamlit run app.py` in the terminal, we will see the following content, and the system will automatically pop up the web page:
-![screenshot of streamlit run]()
-![screenshot of web]()
-![screenshot of test]()
+![screenshot of streamlit run](https://github.com/Estrellas-857/My_Chatbot/blob/master/pic/local_test.png)
+![screenshot of web](https://github.com/Estrellas-857/My_Chatbot/blob/master/pic/home_screen.png)
+![screenshot of test](https://github.com/Estrellas-857/My_Chatbot/blob/master/pic/locat_test_pass.png)
 After the local test, our web now is ready for deployment.
 
 ## Part III. Deploy Model
@@ -139,20 +139,20 @@ After the local test, our web now is ready for deployment.
 We can directly deploy this web page through the `Deploy` button in the upper right corner. But it should be noted that we need to register an account and upload the code to github for hosting in advance.
 Follow the instruction, your app will be deployed eventually. Keep in mind this process could take a while to finish.
 
-![screenshot of app]()
-![screenshot of deploy]()
+![screenshot of app](https://github.com/Estrellas-857/My_Chatbot/blob/master/pic/app.png)
+![screenshot of deploy](https://github.com/Estrellas-857/My_Chatbot/blob/master/pic/deploy.png)
 
-My Little Chatbot URL: https://estrellas-857-my-chatbot-app-kdklz8.streamlit.app/
+- My Little Chatbot URL: https://estrellas-857-my-chatbot-app-kdklz8.streamlit.app/
 
 ### 7. AWS EC2 Deploy
 We need to create a EC2 instance. Just follow the video instruction:
 Video instruction: https://www.youtube.com/watch?v=DflWqmppOAg 
 
-![screenshot of ec2]()
+![screenshot of ec2](https://github.com/Estrellas-857/My_Chatbot/blob/master/pic/ec2.png)
 
 We just need to connect to that instance. And use `git clone https://github.com/Estrellas-857/My_Chatbot.git` to build the file. Use `cd` to go into the directory, and run `streamlit run app.py`.
 
-![screenshot of ec2 running]()
+![screenshot of ec2 running](https://github.com/Estrellas-857/My_Chatbot/blob/master/pic/ec2_running.png)
 
 We can visit our chatbot web throught the given URL above.
    	
