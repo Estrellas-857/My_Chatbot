@@ -38,6 +38,7 @@ def get_model_response(input_text, temperature, top_k, top_p):
 ```
 
 ## Part II. Create a Website Using Streamlit
+
 ### 3. Install necessary libraries and configure virtual environment
 Next we need to configure `venv`. First, run `vanv\Scripts\activate` to start the virtual environment.
 Then, install necessary libraries:
@@ -108,7 +109,7 @@ user_avatar = "C:/Users/37493/ids721week9/user_icon.png"
 bot_avatar = "C:/Users/37493/ids721week9/bot_icon.png" 
 ```
 
-Last, we need to add basic function for the conversation:
+Last, we need to add basic functions for the conversation:
 ```
 # user input
 user_input = st.text_input("Please type your questions here: ", key="user_input")
@@ -132,24 +133,29 @@ Run `streamlit run app.py` in the terminal, we will see the following content, a
 ![screenshot of test]()
 After the local test, our web now is ready for deployment.
 
-## Part III. Deploy model via Streamlit(accessible via browser)
-### 6. 
-我们可以直接通过网页右上角的`Deploy`按钮来直接部署这个网页。但是需要注意的是，我们需要注册账号并且提前把代码上传到github中托管。
+## Part III. Deploy Model
+
+### 6. Streamlit App Deploy
+We can directly deploy this web page through the `Deploy` button in the upper right corner. But it should be noted that we need to register an account and upload the code to github for hosting in advance.
 Follow the instruction, your app will be deployed eventually. Keep in mind this process could take a while to finish.
+
+![screenshot of app]()
 ![screenshot of deploy]()
 
-## Part IV. EC2 Hosting
-### 7. Created an EC2 Instance
+My Little Chatbot URL: https://estrellas-857-my-chatbot-app-kdklz8.streamlit.app/
 
- 因为instace使用的     	
-Keep in mind that t2.micro instances are very limited. We may run out of RAM memory when setting environment.       	
- To fix it, I would recommend you create a swap file. Swap files act as additional RAM memory, but it's a bit slow as it runs from the hard drive. However they are useful when you want to allocate a memory peak, as it is your case. The following example shows how to create a 5GB swap file:   
-  	```
-    sudo fallocate -l 1G ~/swapfile
-sudo dd if=/dev/zero of=~/swapfile bs=1024 count=1048576
-sudo chmod 600 ~/swapfile
-sudo mkswap ~/swapfile
-sudo swapon ~/swapfile
-```
+### 7. AWS EC2 Deploy
+We need to create a EC2 instance. Just follow the video instruction:
+Video instruction: https://www.youtube.com/watch?v=DflWqmppOAg 
+
+![screenshot of ec2]()
+
+We just need to connect to that instance. And use `git clone https://github.com/Estrellas-857/My_Chatbot.git` to build the file. Use `cd` to go into the directory, and run `streamlit run app.py`.
+
+![screenshot of ec2 running]()
+
+We can visit our chatbot web throught the given URL above.
+   	
+Keep in mind that t2.micro instances are very limited. We may run out of RAM memory when setting environment and running the app.       	
+
  
-
