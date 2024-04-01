@@ -5,6 +5,7 @@
 ### 1. Choose the suitable model
 Because of the relationship between the performance and volume of large language models, we need to choose a model of appropriate size. Here I selected the TinyLlama model after screening. Compared with some popular language models, the TinyLlama model has fewer parameters, but its performance is similar.
 - URL: https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
 According to the introduction on the web page, we directly choose `Use a pipeline as a high-level helper`
 ```
 # Use a pipeline as a high-level helper
