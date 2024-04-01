@@ -1,7 +1,9 @@
 import transformers
 import torch
+import accelerate
 print(transformers.__version__)
 print(torch.__version__)
+print(accelerate.__version__)
 
 
 if torch.cuda.is_available():
