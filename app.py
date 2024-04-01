@@ -16,7 +16,7 @@ col1, col2 = st.columns([1, 4])
 
 # Place image in first column
 with col1:
-    st.image("C:/Users/37493/ids721week9/bot.png", width=100)  # Adjust image path and width
+    st.image("bot.png", width=100)  # Adjust image path and width
 
 # Place title in second column
 with col2:
@@ -60,8 +60,8 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-user_avatar = "C:/Users/37493/ids721week9/user_icon.png" 
-bot_avatar = "C:/Users/37493/ids721week9/bot_icon.png" 
+user_avatar = "user_icon.png" 
+bot_avatar = "bot_icon.png" 
 
 # Make sure the history exists
 if 'history' not in st.session_state:
